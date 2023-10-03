@@ -11,6 +11,7 @@
 		171D1CCD2ACC377300CEFA31 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CCC2ACC377300CEFA31 /* SearchController.swift */; };
 		171D1CCF2ACC37A000CEFA31 /* LikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CCE2ACC37A000CEFA31 /* LikesController.swift */; };
 		171D1CD12ACC406A00CEFA31 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */; };
+		171D1CD32ACC54E100CEFA31 /* MusicCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */; };
 		DE5E7DF42ACBFBD800F1CC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */; };
 		DE5E7DF62ACBFBD800F1CC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */; };
 		DE5E7DF82ACBFBD800F1CC0A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7DF72ACBFBD800F1CC0A /* HomeController.swift */; };
@@ -24,6 +25,7 @@
 		171D1CCC2ACC377300CEFA31 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		171D1CCE2ACC37A000CEFA31 /* LikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesController.swift; sourceTree = "<group>"; };
 		171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCellController.swift; sourceTree = "<group>"; };
 		DE5E7DF02ACBFBD800F1CC0A /* spotify_io_GSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotify_io_GSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */,
 				DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */,
 				DE5E7DF72ACBFBD800F1CC0A /* HomeController.swift */,
+				171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */,
 				DE5E7DF92ACBFBD800F1CC0A /* Main.storyboard */,
 				171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */,
 				171D1CCA2ACC0F1F00CEFA31 /* LoginController.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5E7DF82ACBFBD800F1CC0A /* HomeController.swift in Sources */,
+				171D1CD32ACC54E100CEFA31 /* MusicCellController.swift in Sources */,
 				171D1CCD2ACC377300CEFA31 /* SearchController.swift in Sources */,
 				171D1CCB2ACC0F1F00CEFA31 /* LoginController.swift in Sources */,
 				171D1CD12ACC406A00CEFA31 /* MainTabBarController.swift in Sources */,
