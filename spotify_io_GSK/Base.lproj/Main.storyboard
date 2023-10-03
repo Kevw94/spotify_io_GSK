@@ -1,24 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
+        <scene sceneID="IoC-Dw-vl6">
+            <objects>
+                <viewController storyboardIdentifier="loginPage" id="PJ0-Q7-ySs" customClass="LoginController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9YB-Vw-Tew">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-5A-jXg">
+                                <rect key="frame" x="50" y="209" width="293" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSP-Xh-R8r">
+                                <rect key="frame" x="50" y="319" width="293" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-DX-28B">
+                                <rect key="frame" x="49.999999999999993" y="283" width="78.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-qf-4pH">
+                                <rect key="frame" x="49.999999999999993" y="173" width="78.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-Ua-Oqo">
+                                <rect key="frame" x="159" y="393" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginAction:" destination="PJ0-Q7-ySs" eventType="touchUpInside" id="aDl-Sq-237"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TJT-b2-j2O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gtD-qf-4pH" firstAttribute="top" secondItem="TJT-b2-j2O" secondAttribute="top" constant="70" id="4Ry-ZZ-E62"/>
+                            <constraint firstItem="tSP-Xh-R8r" firstAttribute="leading" secondItem="TJT-b2-j2O" secondAttribute="leading" constant="50" id="7DR-1Q-KQE"/>
+                            <constraint firstItem="1eA-Ua-Oqo" firstAttribute="top" secondItem="tSP-Xh-R8r" secondAttribute="bottom" constant="40" id="7Tx-A6-u77"/>
+                            <constraint firstItem="gtD-qf-4pH" firstAttribute="leading" secondItem="TJT-b2-j2O" secondAttribute="leading" constant="50" id="ASl-ct-piQ"/>
+                            <constraint firstItem="gtD-qf-4pH" firstAttribute="centerX" secondItem="rIB-DX-28B" secondAttribute="centerX" id="D6w-kG-Shf"/>
+                            <constraint firstItem="9Uc-5A-jXg" firstAttribute="top" secondItem="gtD-qf-4pH" secondAttribute="bottom" constant="15" id="JYa-YP-Gdt"/>
+                            <constraint firstItem="rIB-DX-28B" firstAttribute="leading" secondItem="TJT-b2-j2O" secondAttribute="leading" constant="50" id="T6g-P1-VJS"/>
+                            <constraint firstItem="TJT-b2-j2O" firstAttribute="trailing" secondItem="1eA-Ua-Oqo" secondAttribute="trailing" constant="159" id="bm4-fg-TIo"/>
+                            <constraint firstItem="rIB-DX-28B" firstAttribute="top" secondItem="9Uc-5A-jXg" secondAttribute="bottom" constant="40" id="cnh-c9-I7G"/>
+                            <constraint firstItem="TJT-b2-j2O" firstAttribute="trailing" secondItem="9Uc-5A-jXg" secondAttribute="trailing" constant="50" id="cqH-uv-6co"/>
+                            <constraint firstItem="9Uc-5A-jXg" firstAttribute="leading" secondItem="TJT-b2-j2O" secondAttribute="leading" constant="50" id="mug-2X-OnQ"/>
+                            <constraint firstItem="tSP-Xh-R8r" firstAttribute="top" secondItem="rIB-DX-28B" secondAttribute="bottom" constant="15" id="ncG-cF-Hu0"/>
+                            <constraint firstItem="1eA-Ua-Oqo" firstAttribute="leading" secondItem="TJT-b2-j2O" secondAttribute="leading" constant="159" id="o29-tT-QAX"/>
+                            <constraint firstItem="TJT-b2-j2O" firstAttribute="trailing" secondItem="tSP-Xh-R8r" secondAttribute="trailing" constant="50" id="zxi-Hj-zVk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcb-8Z-RkI"/>
+                    <connections>
+                        <outlet property="loginButton" destination="1eA-Ua-Oqo" id="qr5-qr-SJV"/>
+                        <outlet property="passwordLabel" destination="rIB-DX-28B" id="pW6-t9-mZv"/>
+                        <outlet property="passwordTextField" destination="tSP-Xh-R8r" id="aAq-fR-CHq"/>
+                        <outlet property="usernameLabel" destination="gtD-qf-4pH" id="Hl8-iy-bdO"/>
+                        <outlet property="usernameTextField" destination="9Uc-5A-jXg" id="yXM-2N-QB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLq-oD-YQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.35114503816794" y="-2.1126760563380285"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" title="Home" id="BYZ-38-t0r" customClass="HomeController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="UgT-ig-heV">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1989" y="-727"/>
+        </scene>
+        <!--Likes-->
+        <scene sceneID="kbu-tQ-1Fx">
+            <objects>
+                <viewController storyboardIdentifier="likesPage" id="mvq-WZ-DaA" customClass="LikesController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkv-xi-ID3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YOq-kt-t2K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Likes" image="star.fill" catalog="system" id="4jp-gy-P6w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5H-es-Gfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989" y="593"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="8Lf-oZ-cnY">
+            <objects>
+                <viewController storyboardIdentifier="searchPage" id="9IG-zG-ilA" customClass="SearchController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PeC-rc-GWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RCc-yd-bm4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="I52-Vc-Tkq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0t-CF-mXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989" y="-68"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="qoM-gs-ZsS">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="EZU-uG-ffF" customClass="MainTabBarController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XD9-cd-Itb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MFQ-am-waL"/>
+                        <segue destination="9IG-zG-ilA" kind="relationship" relationship="viewControllers" id="lGI-oG-8yg"/>
+                        <segue destination="mvq-WZ-DaA" kind="relationship" relationship="viewControllers" id="IZq-ly-B36"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdZ-6o-bBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="-1"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0MX-dY-q5R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yfo-OM-E6X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DgB-wX-dtY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PJ0-Q7-ySs" kind="relationship" relationship="rootViewController" id="Suy-LY-ht2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKh-qc-SNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692.36641221374043" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
