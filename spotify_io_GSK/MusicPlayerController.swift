@@ -20,7 +20,7 @@ class MusicPlayerController: UIViewController {
     }
 
     func displaySliderValue(_ sender: UISlider) {
-        let selectedValue = sender.value
+
     }
     
     func setupUI() {

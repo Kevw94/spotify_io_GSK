@@ -30,7 +30,8 @@ class HomeController: UIViewController {
     
     func setCollectionViewLayout() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (view.frame.size.width/2) - 15, height: 200)
+        let size = (view.frame.size.width / 2) - 15
+        layout.itemSize = CGSize(width: size, height: size)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = UIColor(hex: "#191414")
