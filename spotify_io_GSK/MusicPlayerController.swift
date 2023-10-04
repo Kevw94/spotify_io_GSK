@@ -58,7 +58,27 @@ class MusicPlayerController: UIViewController {
         setupUI()
 
     }
-
+    
+    
+    @IBAction func prevMusicButton(_ sender: UIButton) {
+        if self.indexSound! > 0 {
+            self.indexSound? -= 1
+            
+            playNextTrack()
+            setupUI()
+        }
+        
+    }
+    
+    @IBAction func nextMusicButton(_ sender: UIButton) {
+        if self.indexSound! < self.musics?.count ?? 0 {
+            self.indexSound? += 1
+            
+            playNextTrack()
+            setupUI()
+        }
+        
+    }
     
     @IBAction func sliderChange(_ sender: UISlider) {
         let seconds : Int64 = Int64(slider.value)
@@ -83,9 +103,9 @@ class MusicPlayerController: UIViewController {
     
 
     
-    func setupUI() {        
+    func setupUI() {
         self.titleLabel.text = musics?[indexSound!].title
-        self.artistLabel.text = musics?[indexSound!].title
+        self.artistLabel.text = musics?[indexSound!].artist.name
 
         if let imageUrl = musics?[indexSound!].image {
           imgAlbumCover.downloaded(from: imageUrl)
