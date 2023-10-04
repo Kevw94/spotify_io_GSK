@@ -33,7 +33,7 @@ class LoginController: UIViewController {
             return
         }
 
-        if username == "toto" && password == "toto" {
+        if username == "" && password == "" {
             if let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainTabBarController") as? UITabBarController {
                 navigationItem.hidesBackButton = true
                 navigationController?.interactivePopGestureRecognizer?.isEnabled = false
