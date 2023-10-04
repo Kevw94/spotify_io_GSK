@@ -2,7 +2,7 @@ import UIKit
 
 class MusicCellController: UICollectionViewCell {
     
-    var imageView: UIView!  // Placeholder pour l'image
+    var imageView: UIImageView!   // Placeholder pour l'image
     var titleLabel: UILabel!
     
     override init(frame: CGRect) {
@@ -17,15 +17,11 @@ class MusicCellController: UICollectionViewCell {
     }
     
     private func setupImageView() {
-        imageView = UIView()
+        imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(imageView)
-        
-        NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 100),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
-            imageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
-        ])
     }
     
     private func setupTitleLabel() {

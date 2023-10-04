@@ -1,44 +1,24 @@
-//
-//  ViewController.swift
-//  spotify_io_GSK
-//
-//  Created by kevin on 03/10/2023.
-//
-
 import UIKit
 
-class HomeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    struct Music {
-        var title: String
-        var imagePlaceholder: UIColor
-    }
-    
+class HomeController: UIViewController {
+
     var collectionView: UICollectionView!
-    
-    var songs: [Music] = [
-        Music(title: "Chanson 1", imagePlaceholder: UIColor(hex: "#FAA0A0")),
-        Music(title: "Chanson 2", imagePlaceholder: .green),
-        Music(title: "Chanson 1", imagePlaceholder: .green),
-        Music(title: "Chanson 2", imagePlaceholder: .green),
-        Music(title: "Chanson 1", imagePlaceholder: .green),
-        Music(title: "Chanson 2", imagePlaceholder: .green),
-        Music(title: "Chanson 1", imagePlaceholder: .green),
-        Music(title: "Chanson 2", imagePlaceholder: .green),
-    ]
+    var songs: [Music] = []
+    var musicService = MusicService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
         self.view.backgroundColor = UIColor(hex: "#191414")
         self.title = "Bienvenue"
         
         setCollectionViewLayout()
         setCollectionViewDataParameters()
-        
-
-
         view.addSubview(collectionView)
-
+        
+        fetchMusic()
+        
         // Configuration des contraintes
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -61,9 +41,24 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.dataSource = self
         collectionView.register(MusicCellController.self, forCellWithReuseIdentifier: "MusicCell")
     }
+    
+    func fetchMusic() {
+        musicService.fetchMusic { [weak self] (songs, error) in
+            guard let songs = songs else {
+                print(error?.localizedDescription ?? "Unknown error")
+                return
+            }
+
+            self?.songs = songs
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
+    }
 }
 
-extension HomeController: UICollectionViewDelegateFlowLayout {
+extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return songs.count
     }
@@ -71,11 +66,18 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicCell", for: indexPath) as! MusicCellController
         cell.titleLabel.text = songs[indexPath.row].title
-        cell.imageView.backgroundColor = songs[indexPath.row].imagePlaceholder
+        if let imageUrl = URL(string: songs[indexPath.row].image) {
+            cell.imageView.downloaded(from: imageUrl)
+        }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let musicPlayerController = MusicPlayerController()
+        musicPlayerController.selectedMusic = songs[indexPath.row]
+        if let imageUrl = URL(string: songs[indexPath.row].image) {
+            musicPlayerController.musicImage = imageUrl
+        }
+        self.present(musicPlayerController, animated: true, completion: nil)
+    }
 }
-
-
-
-

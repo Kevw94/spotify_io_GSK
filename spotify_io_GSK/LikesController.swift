@@ -12,7 +12,6 @@ class LikesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(hex: "#191414")
-        // Do any additional setup after loading the view.
     }
     
 

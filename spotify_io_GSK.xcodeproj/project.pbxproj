@@ -13,6 +13,9 @@
 		171D1CD12ACC406A00CEFA31 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */; };
 		171D1CD32ACC54E100CEFA31 /* MusicCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */; };
 		17BA90BA2ACD5F5400995096 /* UIColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90B92ACD5F5400995096 /* UIColorConverter.swift */; };
+		17BA90BC2ACD6EC800995096 /* MusicPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90BB2ACD6EC800995096 /* MusicPlayerController.swift */; };
+		17BA90BE2ACD855500995096 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90BD2ACD855400995096 /* MusicService.swift */; };
+		17BA90C02ACD88EB00995096 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90BF2ACD88EB00995096 /* ImageProvider.swift */; };
 		DE5E7DF42ACBFBD800F1CC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */; };
 		DE5E7DF62ACBFBD800F1CC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */; };
 		DE5E7DF82ACBFBD800F1CC0A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7DF72ACBFBD800F1CC0A /* HomeController.swift */; };
@@ -28,6 +31,9 @@
 		171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCellController.swift; sourceTree = "<group>"; };
 		17BA90B92ACD5F5400995096 /* UIColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorConverter.swift; sourceTree = "<group>"; };
+		17BA90BB2ACD6EC800995096 /* MusicPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerController.swift; sourceTree = "<group>"; };
+		17BA90BD2ACD855400995096 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		17BA90BF2ACD88EB00995096 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		DE5E7DF02ACBFBD800F1CC0A /* spotify_io_GSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotify_io_GSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,11 +74,14 @@
 		DE5E7DF22ACBFBD800F1CC0A /* spotify_io_GSK */ = {
 			isa = PBXGroup;
 			children = (
+				17BA90BB2ACD6EC800995096 /* MusicPlayerController.swift */,
 				171D1CCC2ACC377300CEFA31 /* SearchController.swift */,
 				171D1CCE2ACC37A000CEFA31 /* LikesController.swift */,
 				DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */,
 				DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */,
 				DE5E7DF72ACBFBD800F1CC0A /* HomeController.swift */,
+				17BA90BF2ACD88EB00995096 /* ImageProvider.swift */,
+				17BA90BD2ACD855400995096 /* MusicService.swift */,
 				171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */,
 				17BA90B92ACD5F5400995096 /* UIColorConverter.swift */,
 				DE5E7DF92ACBFBD800F1CC0A /* Main.storyboard */,
@@ -156,12 +165,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BA90BC2ACD6EC800995096 /* MusicPlayerController.swift in Sources */,
 				DE5E7DF82ACBFBD800F1CC0A /* HomeController.swift in Sources */,
 				171D1CD32ACC54E100CEFA31 /* MusicCellController.swift in Sources */,
+				17BA90BE2ACD855500995096 /* MusicService.swift in Sources */,
 				171D1CCD2ACC377300CEFA31 /* SearchController.swift in Sources */,
 				171D1CCB2ACC0F1F00CEFA31 /* LoginController.swift in Sources */,
 				17BA90BA2ACD5F5400995096 /* UIColorConverter.swift in Sources */,
 				171D1CD12ACC406A00CEFA31 /* MainTabBarController.swift in Sources */,
+				17BA90C02ACD88EB00995096 /* ImageProvider.swift in Sources */,
 				DE5E7DF42ACBFBD800F1CC0A /* AppDelegate.swift in Sources */,
 				171D1CCF2ACC37A000CEFA31 /* LikesController.swift in Sources */,
 				DE5E7DF62ACBFBD800F1CC0A /* SceneDelegate.swift in Sources */,

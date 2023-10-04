@@ -18,6 +18,9 @@ class MainTabBarController: UITabBarController {
     
     func setupTabBarAppearance() {
         let appearance = UITabBarAppearance()
+        
+        // Configuration de la couleur de fond
+        appearance.backgroundColor = UIColor(hex: "#191414")
 
         // Configuration pour l'état non sélectionné
         let normalAttributes: [NSAttributedString.Key: Any] = [

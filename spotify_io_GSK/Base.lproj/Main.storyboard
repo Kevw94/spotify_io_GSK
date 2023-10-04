@@ -157,6 +157,69 @@
             </objects>
             <point key="canvasLocation" x="1989" y="-68"/>
         </scene>
+        <!--Music Player Controller-->
+        <scene sceneID="geu-CF-b4b">
+            <objects>
+                <viewController id="zff-fE-1df" customClass="MusicPlayerController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pxk-Ag-Sd5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSB-F9-sxz">
+                                <rect key="frame" x="46" y="200" width="300" height="300"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XU8-jw-n5s">
+                                <rect key="frame" x="44" y="653" width="304" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1Tg-w9-Q0d"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="displaySlider:" destination="zff-fE-1df" eventType="valueChanged" id="JKI-0L-2Eo"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-Av-9CX">
+                                <rect key="frame" x="46" y="531" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pod-00-HAg">
+                                <rect key="frame" x="46" y="560" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPo-It-cCn">
+                                <rect key="frame" x="311" y="531" width="35" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="+"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EZv-zv-gbx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XU8-jw-n5s" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" id="ED1-wq-kJi"/>
+                            <constraint firstItem="yPo-It-cCn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PHj-Av-9CX" secondAttribute="trailing" constant="8" symbolic="YES" id="EYh-eQ-yYU"/>
+                            <constraint firstItem="XU8-jw-n5s" firstAttribute="top" secondItem="Pod-00-HAg" secondAttribute="bottom" constant="72" id="L9L-pa-wQ1"/>
+                            <constraint firstItem="yPo-It-cCn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pod-00-HAg" secondAttribute="trailing" constant="8" symbolic="YES" id="N4g-V2-b5d"/>
+                            <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" constant="47" id="RdZ-eo-oUL"/>
+                            <constraint firstItem="NSB-F9-sxz" firstAttribute="top" secondItem="EZv-zv-gbx" secondAttribute="top" constant="141" id="XEp-l5-2ij"/>
+                            <constraint firstItem="PHj-Av-9CX" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="YcB-AP-AiD"/>
+                            <constraint firstItem="Pod-00-HAg" firstAttribute="leading" secondItem="XU8-jw-n5s" secondAttribute="leading" id="atd-kD-WsH"/>
+                            <constraint firstItem="PHj-Av-9CX" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="eG9-cC-B8W"/>
+                            <constraint firstItem="NSB-F9-sxz" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="i5e-ky-amV"/>
+                            <constraint firstItem="Pod-00-HAg" firstAttribute="leading" secondItem="PHj-Av-9CX" secondAttribute="leading" id="kaX-wT-Qw5"/>
+                            <constraint firstItem="Pod-00-HAg" firstAttribute="top" secondItem="PHj-Av-9CX" secondAttribute="bottom" constant="8" symbolic="YES" id="kgz-yd-Sam"/>
+                            <constraint firstItem="EZv-zv-gbx" firstAttribute="bottom" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="318" id="lj0-bz-Seq"/>
+                            <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="yPo-It-cCn" secondAttribute="trailing" constant="47" id="pnq-UY-YZ0"/>
+                            <constraint firstItem="yPo-It-cCn" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="uSL-8Q-W0x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-eq-pmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3281.679389312977" y="-68.309859154929583"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="qoM-gs-ZsS">
             <objects>
