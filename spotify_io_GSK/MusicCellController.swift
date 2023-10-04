@@ -19,7 +19,6 @@ class MusicCellController: UICollectionViewCell {
     private func setupImageView() {
         imageView = UIView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .green  // La couleur placeholder
         contentView.addSubview(imageView)
         
         NSLayoutConstraint.activate([
@@ -32,7 +31,7 @@ class MusicCellController: UICollectionViewCell {
     private func setupTitleLabel() {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = .black
+        titleLabel.textColor = .white
         titleLabel.textAlignment = .center
         contentView.addSubview(titleLabel)
         

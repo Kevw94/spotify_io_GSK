@@ -28,12 +28,12 @@ class MainTabBarController: UITabBarController {
 
         // Configuration pour l'état sélectionné
         let selectedAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.green
+            .foregroundColor: UIColor(hex: "#1ed760")
         ]
-        appearance.stackedLayoutAppearance.selected.iconColor = UIColor.green
+        appearance.stackedLayoutAppearance.selected.iconColor = UIColor(hex: "#1ed760")
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttributes
 
-        // Affecter l'apparence à la barre d'onglets
+        // Affecte l'apparence à la barre d'onglets
         tabBar.standardAppearance = appearance
     }
     

@@ -17,22 +17,25 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
     var collectionView: UICollectionView!
     
     var songs: [Music] = [
+        Music(title: "Chanson 1", imagePlaceholder: UIColor(hex: "#FAA0A0")),
+        Music(title: "Chanson 2", imagePlaceholder: .green),
+        Music(title: "Chanson 1", imagePlaceholder: .green),
+        Music(title: "Chanson 2", imagePlaceholder: .green),
+        Music(title: "Chanson 1", imagePlaceholder: .green),
+        Music(title: "Chanson 2", imagePlaceholder: .green),
         Music(title: "Chanson 1", imagePlaceholder: .green),
         Music(title: "Chanson 2", imagePlaceholder: .green),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: "#191414")
+        self.view.backgroundColor = UIColor(hex: "#191414")
+        self.title = "Bienvenue"
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (view.frame.size.width/2) - 15, height: 200) // Ajustez la hauteur selon vos besoins
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(MusicCellController.self, forCellWithReuseIdentifier: "MusicCell")
-        collectionView.backgroundColor = UIColor(named: "#191414")
+        setCollectionViewLayout()
+        setCollectionViewDataParameters()
+        
+
 
         view.addSubview(collectionView)
 
@@ -43,6 +46,20 @@ class HomeController: UIViewController, UICollectionViewDataSource, UICollection
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
         ])
+    }
+    
+    func setCollectionViewLayout() {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (view.frame.size.width/2) - 15, height: 200)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = UIColor(hex: "#191414")
+    }
+    
+    func setCollectionViewDataParameters() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(MusicCellController.self, forCellWithReuseIdentifier: "MusicCell")
     }
 }
 
@@ -58,5 +75,7 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
         return cell
     }
 }
+
+
 
 

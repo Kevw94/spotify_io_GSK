@@ -23,7 +23,7 @@ class LoginController: UIViewController {
         usernameLabel.textColor = .white
         passwordLabel.textColor = .white
         
-        self.view.backgroundColor = UIColor(named: "#191414")
+        self.view.backgroundColor = UIColor(hex: "#191414")
     }
 
 
