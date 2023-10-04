@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -160,13 +159,16 @@
         <!--Music Player Controller-->
         <scene sceneID="geu-CF-b4b">
             <objects>
-                <viewController id="zff-fE-1df" customClass="MusicPlayerController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="music" id="zff-fE-1df" customClass="MusicPlayerController" customModule="spotify_io_GSK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxk-Ag-Sd5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSB-F9-sxz">
                                 <rect key="frame" x="46" y="200" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Toa-Xa-hb4"/>
+                                </constraints>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XU8-jw-n5s">
                                 <rect key="frame" x="44" y="653" width="304" height="30"/>
@@ -174,17 +176,17 @@
                                     <constraint firstAttribute="height" constant="29" id="1Tg-w9-Q0d"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="displaySlider:" destination="zff-fE-1df" eventType="valueChanged" id="JKI-0L-2Eo"/>
+                                    <action selector="sliderAction:" destination="zff-fE-1df" eventType="valueChanged" id="a93-ig-9ZF"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-Av-9CX">
-                                <rect key="frame" x="46" y="531" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-Av-9CX">
+                                <rect key="frame" x="46" y="531" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pod-00-HAg">
-                                <rect key="frame" x="46" y="560" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pod-00-HAg">
+                                <rect key="frame" x="46" y="560" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -198,23 +200,26 @@
                         <viewLayoutGuide key="safeArea" id="EZv-zv-gbx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XU8-jw-n5s" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" id="ED1-wq-kJi"/>
-                            <constraint firstItem="yPo-It-cCn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PHj-Av-9CX" secondAttribute="trailing" constant="8" symbolic="YES" id="EYh-eQ-yYU"/>
-                            <constraint firstItem="XU8-jw-n5s" firstAttribute="top" secondItem="Pod-00-HAg" secondAttribute="bottom" constant="72" id="L9L-pa-wQ1"/>
-                            <constraint firstItem="yPo-It-cCn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pod-00-HAg" secondAttribute="trailing" constant="8" symbolic="YES" id="N4g-V2-b5d"/>
+                            <constraint firstItem="XU8-jw-n5s" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="HBf-T4-mxa"/>
+                            <constraint firstItem="XU8-jw-n5s" firstAttribute="top" secondItem="Pod-00-HAg" secondAttribute="bottom" constant="72" id="MjN-sY-Qsz"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" constant="47" id="RdZ-eo-oUL"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="top" secondItem="EZv-zv-gbx" secondAttribute="top" constant="141" id="XEp-l5-2ij"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="YcB-AP-AiD"/>
-                            <constraint firstItem="Pod-00-HAg" firstAttribute="leading" secondItem="XU8-jw-n5s" secondAttribute="leading" id="atd-kD-WsH"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="eG9-cC-B8W"/>
+                            <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="XU8-jw-n5s" secondAttribute="trailing" constant="47" id="hO5-yP-pLb"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="i5e-ky-amV"/>
-                            <constraint firstItem="Pod-00-HAg" firstAttribute="leading" secondItem="PHj-Av-9CX" secondAttribute="leading" id="kaX-wT-Qw5"/>
                             <constraint firstItem="Pod-00-HAg" firstAttribute="top" secondItem="PHj-Av-9CX" secondAttribute="bottom" constant="8" symbolic="YES" id="kgz-yd-Sam"/>
-                            <constraint firstItem="EZv-zv-gbx" firstAttribute="bottom" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="318" id="lj0-bz-Seq"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="yPo-It-cCn" secondAttribute="trailing" constant="47" id="pnq-UY-YZ0"/>
                             <constraint firstItem="yPo-It-cCn" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="uSL-8Q-W0x"/>
+                            <constraint firstItem="Pod-00-HAg" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="um2-en-moi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="Pod-00-HAg" id="d0Z-Bd-tao"/>
+                        <outlet property="imgAlbumCover" destination="NSB-F9-sxz" id="oae-iv-T6b"/>
+                        <outlet property="slider" destination="XU8-jw-n5s" id="q9t-Vp-KdO"/>
+                        <outlet property="titleLabel" destination="PHj-Av-9CX" id="Qy8-1M-aEP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-eq-pmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,13 +271,13 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

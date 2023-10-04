@@ -74,11 +74,18 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let musicPlayerController = MusicPlayerController()
+       /* let musicPlayerController = MusicPlayerController()
         musicPlayerController.selectedMusic = songs[indexPath.row]
         if let imageUrl = URL(string: songs[indexPath.row].image) {
             musicPlayerController.musicImage = imageUrl
         }
-        self.present(musicPlayerController, animated: true, completion: nil)
+        self.present(musicPlayerController, animated: true, completion: nil)*/
+        
+        if let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "music") as? MusicPlayerController {
+            
+            vc.selectedMusic = songs[indexPath.row]
+            self.present(vc, animated: true, completion: nil)
+        }
+
     }
 }
