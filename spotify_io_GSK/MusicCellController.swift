@@ -22,6 +22,11 @@ class MusicCellController: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+        ])
     }
     
     private func setupTitleLabel() {
