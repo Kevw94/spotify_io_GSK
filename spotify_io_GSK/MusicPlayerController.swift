@@ -1,40 +1,44 @@
 import UIKit
 
 class MusicPlayerController: UIViewController {
+    @IBOutlet weak var imgAlbumCover: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
+
     
     var selectedMusic: Music?
-    
-    var musicTitle: String?
-    var musicImage: URL?
-    var titleLabel: UILabel!
-    var imageView: UIImageView!
-    
-    var slider: UISlider!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
 
-        setupUI()
     }
 
-    func displaySliderValue(_ sender: UISlider) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupUI()
 
+    }
+
+    @IBAction func sliderAction(_ sender: Any) {
     }
     
     func setupUI() {
-        titleLabel = UILabel()
-        titleLabel.text = selectedMusic?.title
-        titleLabel.textAlignment = .center
-        titleLabel.frame = CGRect(x: 0, y: 50, width: view.frame.size.width, height: 30)
-        view.addSubview(titleLabel)
 
-        imageView = UIImageView()
+        //titleLabel.textAlignment = .center
+        //titleLabel.frame = CGRect(x: 0, y: 50, width: view.frame.size.width, height: 30)
+        //view.addSubview(titleLabel)
+        self.titleLabel.text = selectedMusic?.title
+        self.artistLabel.text = selectedMusic?.title
+
+        
+        //imageView = UIImageView()
         if let imageUrl = selectedMusic?.image {
-            imageView.downloaded(from: imageUrl)
+          imgAlbumCover.downloaded(from: imageUrl)
         }
-        imageView.frame = CGRect(x: (view.frame.size.width - 300) / 2, y: 100, width: 300, height: 300)
-        view.addSubview(imageView)
     }
 }
