@@ -1,10 +1,24 @@
 import Foundation
 
+struct Artist {
+    let name: String
+}
+
+extension Artist {
+    init?(json: [String: AnyObject]) {
+        guard let name = json["name"] as? String else {
+            return nil
+        }
+        self.name = name
+    }
+}
+
+
 struct Music {
     let title: String
     let urlPage: String
     let image: String
-    let artist: AnyObject
+    let artist: Artist
     let preview: String
 }
 
@@ -14,7 +28,8 @@ extension Music {
               let url = json["link"] as? String,
               let image = json["album"]?["cover"] as? String,
               let preview  = json["preview"] as? String,
-              let artist = json["artist"],
+              let artistJSON = json["artist"] as? [String: AnyObject],
+              let artist = Artist(json: artistJSON),
               let _ = json["link"]
                 
         else {

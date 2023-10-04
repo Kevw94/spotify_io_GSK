@@ -204,6 +204,22 @@
                                     <action selector="playButton:" destination="zff-fE-1df" eventType="touchUpInside" id="JqL-O9-5Fg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpk-Xw-cJq">
+                                <rect key="frame" x="323.33333333333331" y="723" width="39.666666666666686" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="nextMusicButton:" destination="zff-fE-1df" eventType="touchUpInside" id="aju-up-sZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-06-Ko0">
+                                <rect key="frame" x="29.999999999999996" y="723" width="39.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="prevMusicButton:" destination="zff-fE-1df" eventType="touchUpInside" id="XEi-kG-9jg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EZv-zv-gbx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -212,14 +228,18 @@
                             <constraint firstItem="XU8-jw-n5s" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="HBf-T4-mxa"/>
                             <constraint firstItem="hC5-Cj-8k1" firstAttribute="centerX" secondItem="EZv-zv-gbx" secondAttribute="centerX" id="J51-P8-H31"/>
                             <constraint firstItem="XU8-jw-n5s" firstAttribute="top" secondItem="Pod-00-HAg" secondAttribute="bottom" constant="72" id="MjN-sY-Qsz"/>
+                            <constraint firstItem="jHk-06-Ko0" firstAttribute="centerY" secondItem="hC5-Cj-8k1" secondAttribute="centerY" id="PNm-m6-wxT"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" constant="47" id="RdZ-eo-oUL"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="top" secondItem="EZv-zv-gbx" secondAttribute="top" constant="141" id="XEp-l5-2ij"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="YcB-AP-AiD"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="eG9-cC-B8W"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="XU8-jw-n5s" secondAttribute="trailing" constant="47" id="hO5-yP-pLb"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="i5e-ky-amV"/>
+                            <constraint firstItem="qpk-Xw-cJq" firstAttribute="centerY" secondItem="hC5-Cj-8k1" secondAttribute="centerY" id="jBv-G7-ANI"/>
                             <constraint firstItem="Pod-00-HAg" firstAttribute="top" secondItem="PHj-Av-9CX" secondAttribute="bottom" constant="8" symbolic="YES" id="kgz-yd-Sam"/>
+                            <constraint firstItem="jHk-06-Ko0" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="30" id="osE-Va-Dqi"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="yPo-It-cCn" secondAttribute="trailing" constant="47" id="pnq-UY-YZ0"/>
+                            <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="qpk-Xw-cJq" secondAttribute="trailing" constant="30" id="srx-ad-8kR"/>
                             <constraint firstItem="yPo-It-cCn" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="uSL-8Q-W0x"/>
                             <constraint firstItem="Pod-00-HAg" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="um2-en-moi"/>
                         </constraints>
@@ -278,6 +298,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="play" catalog="system" width="117" height="128"/>
