@@ -1,16 +1,22 @@
 import Foundation
 
 struct Music {
-    var title: String
+    let title: String
     let urlPage: String
-    var image: String
+    let image: String
+    let artist: AnyObject
+    let preview: String
 }
 
 extension Music {
     init?(json: [String: AnyObject]) {
         guard let title = json["title"] as? String,
               let url = json["link"] as? String,
-              let image = json["album"]?["cover"] as? String
+              let image = json["album"]?["cover"] as? String,
+              let preview  = json["preview"] as? String,
+              let artist = json["artist"],
+              let _ = json["link"]
+                
         else {
             return nil
         }
@@ -18,6 +24,8 @@ extension Music {
         self.title = title
         self.urlPage = url
         self.image = image
+        self.artist = artist
+        self.preview = preview
     }
 }
 

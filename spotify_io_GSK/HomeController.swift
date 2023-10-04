@@ -83,7 +83,8 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         if let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "music") as? MusicPlayerController {
             
-            vc.selectedMusic = songs[indexPath.row]
+            vc.musics = songs
+            vc.indexSound = indexPath.row
             self.present(vc, animated: true, completion: nil)
         }
 

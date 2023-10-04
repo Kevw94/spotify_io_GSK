@@ -176,7 +176,7 @@
                                     <constraint firstAttribute="height" constant="29" id="1Tg-w9-Q0d"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="sliderAction:" destination="zff-fE-1df" eventType="valueChanged" id="a93-ig-9ZF"/>
+                                    <action selector="sliderChange:" destination="zff-fE-1df" eventType="valueChanged" id="e1V-vS-oUa"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-Av-9CX">
@@ -196,11 +196,21 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="+"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-Cj-8k1">
+                                <rect key="frame" x="175" y="723" width="43.333333333333343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="playButton:" destination="zff-fE-1df" eventType="touchUpInside" id="JqL-O9-5Fg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EZv-zv-gbx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hC5-Cj-8k1" firstAttribute="top" secondItem="XU8-jw-n5s" secondAttribute="bottom" constant="41" id="7AH-oJ-QxE"/>
                             <constraint firstItem="XU8-jw-n5s" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="HBf-T4-mxa"/>
+                            <constraint firstItem="hC5-Cj-8k1" firstAttribute="centerX" secondItem="EZv-zv-gbx" secondAttribute="centerX" id="J51-P8-H31"/>
                             <constraint firstItem="XU8-jw-n5s" firstAttribute="top" secondItem="Pod-00-HAg" secondAttribute="bottom" constant="72" id="MjN-sY-Qsz"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" constant="47" id="RdZ-eo-oUL"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="top" secondItem="EZv-zv-gbx" secondAttribute="top" constant="141" id="XEp-l5-2ij"/>
@@ -216,6 +226,7 @@
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="Pod-00-HAg" id="d0Z-Bd-tao"/>
+                        <outlet property="controlButton" destination="hC5-Cj-8k1" id="mmk-4f-qK5"/>
                         <outlet property="imgAlbumCover" destination="NSB-F9-sxz" id="oae-iv-T6b"/>
                         <outlet property="slider" destination="XU8-jw-n5s" id="q9t-Vp-KdO"/>
                         <outlet property="titleLabel" destination="PHj-Av-9CX" id="Qy8-1M-aEP"/>
@@ -269,6 +280,7 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="play" catalog="system" width="117" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
