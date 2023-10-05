@@ -12,6 +12,7 @@
 		171D1CCF2ACC37A000CEFA31 /* LikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CCE2ACC37A000CEFA31 /* LikesController.swift */; };
 		171D1CD12ACC406A00CEFA31 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */; };
 		171D1CD32ACC54E100CEFA31 /* MusicCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */; };
+		177CED2F2ACEA63A00BB2355 /* .gitignore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177CED2E2ACEA63A00BB2355 /* .gitignore.xib */; };
 		17BA90BA2ACD5F5400995096 /* UIColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90B92ACD5F5400995096 /* UIColorConverter.swift */; };
 		17BA90BC2ACD6EC800995096 /* MusicPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90BB2ACD6EC800995096 /* MusicPlayerController.swift */; };
 		17BA90BE2ACD855500995096 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA90BD2ACD855400995096 /* MusicService.swift */; };
@@ -30,6 +31,7 @@
 		171D1CCE2ACC37A000CEFA31 /* LikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesController.swift; sourceTree = "<group>"; };
 		171D1CD02ACC406A00CEFA31 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		171D1CD22ACC54E100CEFA31 /* MusicCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCellController.swift; sourceTree = "<group>"; };
+		177CED2E2ACEA63A00BB2355 /* .gitignore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = .gitignore.xib; sourceTree = "<group>"; };
 		17BA90B92ACD5F5400995096 /* UIColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorConverter.swift; sourceTree = "<group>"; };
 		17BA90BB2ACD6EC800995096 /* MusicPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerController.swift; sourceTree = "<group>"; };
 		17BA90BD2ACD855400995096 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				DE5E7DFC2ACBFBD900F1CC0A /* Assets.xcassets */,
 				DE5E7DFE2ACBFBD900F1CC0A /* LaunchScreen.storyboard */,
 				DE5E7E012ACBFBD900F1CC0A /* Info.plist */,
+				177CED2E2ACEA63A00BB2355 /* .gitignore.xib */,
 			);
 			path = spotify_io_GSK;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5E7E002ACBFBD900F1CC0A /* LaunchScreen.storyboard in Resources */,
+				177CED2F2ACEA63A00BB2355 /* .gitignore.xib in Resources */,
 				DE5E7DFD2ACBFBD900F1CC0A /* Assets.xcassets in Resources */,
 				DE5E7DFB2ACBFBD800F1CC0A /* Main.storyboard in Resources */,
 			);
