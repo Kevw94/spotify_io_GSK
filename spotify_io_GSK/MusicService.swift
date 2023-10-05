@@ -45,31 +45,38 @@ extension Music {
 }
 
 class MusicService {
+    
     func fetchMusic(completion: @escaping ([Music]?, Error?) -> Void) {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        let url = URL(string: "https://api.deezer.com/search?q=a")!
+        let url = URL(string: "https://api.deezer.com/editorial/0/charts")!
         
         let task = session.dataTask(with: url) { (data, response, error) in
-            if error != nil {
+            if let error = error {
                 completion(nil, error)
                 return
             }
 
             var songs: [Music] = []
 
-            if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: AnyObject],
-               let items = json["data"] as? [[String: AnyObject]] {
-                for item in items {
-                    if let music = Music(json: item) {
-                        songs.append(music)
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: AnyObject],
+                   let tracksJson = json["tracks"] as? [String: AnyObject],
+                   let items = tracksJson["data"] as? [[String: AnyObject]] {
+                    for item in items {
+                        if let music = Music(json: item) {
+                            songs.append(music)
+                        }
                     }
+                    completion(songs, nil)
+                } else {
+                    throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to parse data"])
                 }
-                completion(songs, nil)
-            } else {
-                completion(nil, NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to parse data"]))
+            } catch let parsingError {
+                completion(nil, parsingError)
             }
         }
         task.resume()
     }
 }
+
