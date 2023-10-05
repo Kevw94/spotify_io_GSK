@@ -31,6 +31,7 @@ class MusicPlayerController: UIViewController {
         self.slider!.minimumValue = 0
         
         
+        
         // SET slider to 0 initial value
         self.slider.value = 0
         if let duration = musicPlayerManager.audioPlayer?.currentItem?.asset.duration {
@@ -81,6 +82,7 @@ class MusicPlayerController: UIViewController {
         
     }
     
+    
     @IBAction func sliderChange(_ sender: UISlider) {
         let seconds : Double = Double(slider.value)
         musicPlayerManager.seek(to: seconds)
@@ -100,7 +102,20 @@ class MusicPlayerController: UIViewController {
     
     
     
+    @IBAction func likeButton(_ sender: Any) {
+        
+        if likeButton.currentImage == UIImage(systemName: "heart") {
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                // Code à exécuter lorsque le cœur devient rempli
+            } else {
+               likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                // Code à exécuter lorsque le cœur devient non rempli
+            }
+    }
+    
+    
     func setupUI() {
+        
         self.titleLabel.text = musics?[indexSound!].title
         self.artistLabel.text = musics?[indexSound!].artist.name
         
@@ -157,5 +172,6 @@ class MusicPlayerController: UIViewController {
             let likeButtonSize = self.likeButton.frame.size.width
             self.likeButton.layer.cornerRadius = likeButtonSize / 2
             self.likeButton.layer.masksToBounds = true
+            self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
 }
