@@ -14,12 +14,15 @@ extension Artist {
 }
 
 
-struct Music {
+struct Music: Equatable {
     let title: String
     let urlPage: String
     let image: String
     let artist: Artist
     let preview: String
+    static func == (lhs: Music, rhs: Music) -> Bool {
+        return lhs.title == rhs.title && lhs.artist.name == rhs.artist.name
+    }
 }
 
 extension Music {

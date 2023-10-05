@@ -25,6 +25,7 @@
 		DE5E7DFD2ACBFBD900F1CC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7DFC2ACBFBD900F1CC0A /* Assets.xcassets */; };
 		DE5E7E002ACBFBD900F1CC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7DFE2ACBFBD900F1CC0A /* LaunchScreen.storyboard */; };
 		DE5E7E3A2ACDC53B00F1CC0A /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7E392ACDC53B00F1CC0A /* MusicPlayerManager.swift */; };
+		DE5E7E3C2ACEF79400F1CC0A /* LikedMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7E3B2ACEF79400F1CC0A /* LikedMusicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		DE5E7DFF2ACBFBD900F1CC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE5E7E012ACBFBD900F1CC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5E7E392ACDC53B00F1CC0A /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
+		DE5E7E3B2ACEF79400F1CC0A /* LikedMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedMusicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				17BA90BB2ACD6EC800995096 /* MusicPlayerController.swift */,
 				171D1CCC2ACC377300CEFA31 /* SearchController.swift */,
 				171D1CCE2ACC37A000CEFA31 /* LikesController.swift */,
+				DE5E7E3B2ACEF79400F1CC0A /* LikedMusicModel.swift */,
 				DE5E7DF32ACBFBD800F1CC0A /* AppDelegate.swift */,
 				DE5E7DF52ACBFBD800F1CC0A /* SceneDelegate.swift */,
 				DE5E7DF72ACBFBD800F1CC0A /* HomeController.swift */,
@@ -189,6 +192,7 @@
 				DE5E7DF42ACBFBD800F1CC0A /* AppDelegate.swift in Sources */,
 				171D1CCF2ACC37A000CEFA31 /* LikesController.swift in Sources */,
 				DE5E7DF62ACBFBD800F1CC0A /* SceneDelegate.swift in Sources */,
+				DE5E7E3C2ACEF79400F1CC0A /* LikedMusicModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
