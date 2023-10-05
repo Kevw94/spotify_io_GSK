@@ -20,6 +20,9 @@ class MusicPlayerController: UIViewController {
     let pauseImage = UIImage(systemName: "pause")
     
     var musicPlayerManager = MusicPlayerManager.shared
+    //var likesMusicController = LikesController.shared
+    var likesMusicController: LikesController?
+    var likedMusics: [Music]? = []
     
     
     
@@ -100,17 +103,28 @@ class MusicPlayerController: UIViewController {
         }
     }
     
+    @IBAction func likedButtonTapped(_ sender: UIButton) {
+        if let currentMusic = musics?[indexSound!] {
+            if let index =  LikedMusicModel.shared.likedMusics.firstIndex(of: currentMusic) {
+                LikedMusicModel.shared.likedMusics.remove(at: index)
+            } else {
+                LikedMusicModel.shared.likedMusics.append(currentMusic)
+            }
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MusicLiked"), object: nil, userInfo: ["likedMusics": LikedMusicModel.shared.likedMusics])
+        
+    }
+    
     
     
     @IBAction func likeButton(_ sender: Any) {
         
         if likeButton.currentImage == UIImage(systemName: "heart") {
-                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                // Code à exécuter lorsque le cœur devient rempli
-            } else {
-               likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-                // Code à exécuter lorsque le cœur devient non rempli
-            }
+            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
     
@@ -148,7 +162,7 @@ class MusicPlayerController: UIViewController {
                 }
             }
             
-        
+            
             self.controlButton.isSelected = true
             self.controlButton.setImage(self.pauseImage, for: .normal)
             self.slider.value = 0
@@ -156,22 +170,22 @@ class MusicPlayerController: UIViewController {
     }
     
     func customMusicPlayerLayout() {
-            self.view.backgroundColor = UIColor(hex: "#191414")
-            self.titleLabel.textColor = UIColor.white
-            self.artistLabel.textColor = UIColor.white
-            self.slider.tintColor = UIColor(hex: "#1ed760")
-            
-            // Couleur pour les boutons
-            self.controlButton.tintColor = UIColor(hex: "#FFFFFF")
-            self.controlButton.layer.masksToBounds = true
-            self.controlButton.layer.cornerRadius = 35
-            self.nextMusicButton.tintColor = UIColor(hex: "#1ed760")
-            self.prevMusicButton.tintColor = UIColor(hex: "#1ed760")
-            
-            self.likeButton.tintColor = UIColor(hex: "#FFFFFF")
-            let likeButtonSize = self.likeButton.frame.size.width
-            self.likeButton.layer.cornerRadius = likeButtonSize / 2
-            self.likeButton.layer.masksToBounds = true
-            self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        }
+        self.view.backgroundColor = UIColor(hex: "#191414")
+        self.titleLabel.textColor = UIColor.white
+        self.artistLabel.textColor = UIColor.white
+        self.slider.tintColor = UIColor(hex: "#1ed760")
+        
+        // Couleur pour les boutons
+        self.controlButton.tintColor = UIColor(hex: "#FFFFFF")
+        self.controlButton.layer.masksToBounds = true
+        self.controlButton.layer.cornerRadius = 35
+        self.nextMusicButton.tintColor = UIColor(hex: "#1ed760")
+        self.prevMusicButton.tintColor = UIColor(hex: "#1ed760")
+        
+        self.likeButton.tintColor = UIColor(hex: "#FFFFFF")
+        let likeButtonSize = self.likeButton.frame.size.width
+        self.likeButton.layer.cornerRadius = likeButtonSize / 2
+        self.likeButton.layer.masksToBounds = true
+        self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+    }
 }
