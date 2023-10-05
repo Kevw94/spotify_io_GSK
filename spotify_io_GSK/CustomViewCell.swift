@@ -11,4 +11,12 @@ class CustomViewCell: UITableViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    
+    
+    @IBOutlet weak var likesImageView: UIImageView!
+    @IBOutlet weak var labelLikes: UILabel!
+    
+    @IBOutlet weak var dislikeButton: UIButton!
+   
+    
 }

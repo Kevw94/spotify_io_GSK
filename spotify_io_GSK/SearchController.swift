@@ -21,7 +21,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         
         self.title = "Recherche"
 
-        table.separatorColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.8)
+        table.separatorColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.8)
         table.dataSource = self
         table.delegate = self
         
@@ -109,7 +109,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 155
+        return 170
     }
     
     // -------- Update la selection lors de la recherche -------
