@@ -76,8 +76,10 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
 
         let alert = UIAlertController(title: "Hey", message: music, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Oui", style: .default, handler: { action in
-            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "likesPage") as? LikesController {
-               
+            if let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "music") as? MusicPlayerController {
+                
+                vc.musics = self.songs
+                vc.indexSound = indexPath.row
                 self.present(vc, animated: true, completion: nil)
             }
         }))
