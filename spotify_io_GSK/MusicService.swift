@@ -45,6 +45,7 @@ extension Music {
 }
 
 class MusicService {
+    
     func fetchMusic(completion: @escaping ([Music]?, Error?) -> Void) {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
@@ -72,4 +73,6 @@ class MusicService {
         }
         task.resume()
     }
+    
+    
 }
