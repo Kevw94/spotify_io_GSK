@@ -2,7 +2,7 @@ import UIKit
 
 class MusicCellController: UICollectionViewCell {
     
-    var imageView: UIImageView!   // Placeholder pour l'image
+    var imageView: UIImageView!
     var titleLabel: UILabel!
     
     override init(frame: CGRect) {
