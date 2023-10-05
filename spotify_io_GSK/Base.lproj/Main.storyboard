@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -259,16 +258,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="+"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-Cj-8k1">
-                                <rect key="frame" x="175" y="723" width="43.333333333333343" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="play" catalog="system" title=""/>
-                                <connections>
-                                    <action selector="playButton:" destination="zff-fE-1df" eventType="touchUpInside" id="JqL-O9-5Fg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpk-Xw-cJq">
-                                <rect key="frame" x="323.33333333333331" y="723" width="39.666666666666686" height="35"/>
+                                <rect key="frame" x="323.33333333333331" y="722.66666666666663" width="39.666666666666686" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title=""/>
                                 <connections>
@@ -276,11 +267,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-06-Ko0">
-                                <rect key="frame" x="29.999999999999996" y="723" width="39.666666666666657" height="35"/>
+                                <rect key="frame" x="29.999999999999996" y="722.66666666666663" width="39.666666666666657" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title=""/>
                                 <connections>
                                     <action selector="prevMusicButton:" destination="zff-fE-1df" eventType="touchUpInside" id="XEi-kG-9jg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-Cj-8k1">
+                                <rect key="frame" x="175" y="723" width="43.333333333333343" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="playButton:" destination="zff-fE-1df" eventType="touchUpInside" id="JqL-O9-5Fg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -295,6 +294,7 @@
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" constant="47" id="RdZ-eo-oUL"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="top" secondItem="EZv-zv-gbx" secondAttribute="top" constant="141" id="XEp-l5-2ij"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="YcB-AP-AiD"/>
+                            <constraint firstItem="hC5-Cj-8k1" firstAttribute="centerX" secondItem="EZv-zv-gbx" secondAttribute="centerX" id="bNJ-VT-VOU"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="eG9-cC-B8W"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="XU8-jw-n5s" secondAttribute="trailing" constant="47" id="hO5-yP-pLb"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="i5e-ky-amV"/>
@@ -310,7 +310,10 @@
                     <connections>
                         <outlet property="artistLabel" destination="Pod-00-HAg" id="d0Z-Bd-tao"/>
                         <outlet property="controlButton" destination="hC5-Cj-8k1" id="mmk-4f-qK5"/>
-                        <outlet property="imgAlbumCover" destination="NSB-F9-sxz" id="oae-iv-T6b"/>
+                        <outlet property="imgAlbumCover" destination="NSB-F9-sxz" id="75R-AR-YQf"/>
+                        <outlet property="likeButton" destination="yPo-It-cCn" id="VZD-tB-ikA"/>
+                        <outlet property="nextMusicButton" destination="qpk-Xw-cJq" id="IWn-2n-iVc"/>
+                        <outlet property="prevMusicButton" destination="jHk-06-Ko0" id="lqh-1X-Pz9"/>
                         <outlet property="slider" destination="XU8-jw-n5s" id="q9t-Vp-KdO"/>
                         <outlet property="titleLabel" destination="PHj-Av-9CX" id="Qy8-1M-aEP"/>
                     </connections>
