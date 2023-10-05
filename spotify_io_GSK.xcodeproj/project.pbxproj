@@ -22,6 +22,7 @@
 		DE5E7DFB2ACBFBD800F1CC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7DF92ACBFBD800F1CC0A /* Main.storyboard */; };
 		DE5E7DFD2ACBFBD900F1CC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7DFC2ACBFBD900F1CC0A /* Assets.xcassets */; };
 		DE5E7E002ACBFBD900F1CC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5E7DFE2ACBFBD900F1CC0A /* LaunchScreen.storyboard */; };
+		DE5E7E3A2ACDC53B00F1CC0A /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E7E392ACDC53B00F1CC0A /* MusicPlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DE5E7DFC2ACBFBD900F1CC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE5E7DFF2ACBFBD900F1CC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE5E7E012ACBFBD900F1CC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE5E7E392ACDC53B00F1CC0A /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		DE5E7DE72ACBFBD800F1CC0A = {
 			isa = PBXGroup;
 			children = (
+				DE5E7E392ACDC53B00F1CC0A /* MusicPlayerManager.swift */,
 				DE5E7DF22ACBFBD800F1CC0A /* spotify_io_GSK */,
 				DE5E7DF12ACBFBD800F1CC0A /* Products */,
 			);
@@ -171,6 +174,7 @@
 				17BA90BE2ACD855500995096 /* MusicService.swift in Sources */,
 				171D1CCD2ACC377300CEFA31 /* SearchController.swift in Sources */,
 				171D1CCB2ACC0F1F00CEFA31 /* LoginController.swift in Sources */,
+				DE5E7E3A2ACDC53B00F1CC0A /* MusicPlayerManager.swift in Sources */,
 				17BA90BA2ACD5F5400995096 /* UIColorConverter.swift in Sources */,
 				171D1CD12ACC406A00CEFA31 /* MainTabBarController.swift in Sources */,
 				17BA90C02ACD88EB00995096 /* ImageProvider.swift in Sources */,
