@@ -9,8 +9,6 @@ import UIKit
 
 class LikesController:  UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    public var likedMusics: [Music] = []
-    
     
     @IBOutlet weak var table: UITableView!
     var songs: [Music] = []
@@ -31,8 +29,6 @@ class LikesController:  UIViewController, UITableViewDataSource, UITableViewDele
         table.dataSource = self
         table.delegate = self
         self.title = "Titres Likés"
-        
-        
         
     }
     
@@ -65,7 +61,7 @@ class LikesController:  UIViewController, UITableViewDataSource, UITableViewDele
         cell.labelLikes.text = son.title
         //cell.iconImageView.image = UIImage(named: son.picture)
         cell.likesImageView?.downloaded(from: URL(string: son.image)!)
-        cell.dislikeButton.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        cell.dislikeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         cell.dislikeButton.setTitleColor(.white, for: .normal)
         
         
@@ -97,6 +93,17 @@ class LikesController:  UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     
+    @IBAction func dislikeButton(_ sender: UIButton) {
+        if let cell = sender.superview?.superview as? UITableViewCell,
+           let indexPath = table.indexPath(for: cell) {
+            
+            let row = indexPath.row
+            
+            songs.remove(at: row)
+            LikedMusicModel.shared.likedMusics.remove(at: row)
+            self.table.reloadData()
+        }
+    }
     
     
 }
