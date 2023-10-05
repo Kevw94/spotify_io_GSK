@@ -13,6 +13,22 @@ class MusicPlayerManager {
     
     public var audioPlayer: AVPlayer?
     
+    init() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
+    }
+    
+    
+    
+    //
+    
+    
     var isPlaying: Bool {
         return audioPlayer?.rate != 0 && audioPlayer?.error == nil
     }
@@ -38,7 +54,7 @@ class MusicPlayerManager {
         let cmTime = CMTime(seconds: time, preferredTimescale: 1)
         audioPlayer?.seek(to: cmTime)
     }
-
+    
     
     
 }
