@@ -18,11 +18,13 @@ class LikesController:  UIViewController, UITableViewDataSource, UITableViewDele
         super.viewDidLoad()
         
         self.songs = LikedMusicModel.shared.likedMusics
+      
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateLikedMusics), name: NSNotification.Name(rawValue: "MusicLiked"), object: nil)
         
         print(LikedMusicModel.shared.likedMusics)
         self.view.backgroundColor = UIColor.black
+        self.table.backgroundColor = UIColor.black
         
         table.separatorColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.8)
         

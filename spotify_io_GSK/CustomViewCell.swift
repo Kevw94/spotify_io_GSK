@@ -2,7 +2,7 @@
 //  CustomViewCell.swift
 //  spotify_io_GSK
 //
-//  Created by Stéphanie BOISNE on 04/10/2023.
+//  Created by coding on 04/10/2023.
 //
 
 import UIKit
