@@ -50,7 +50,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchcell", for: indexPath) as! CustomViewCell
         let son = songs[indexPath.row]
       
-        cell.label.text = son.image
+        cell.label.text = son.title
         //cell.iconImageView.image = UIImage(named: son.picture)
         if let pictureURL = URL(string: son.image) {
             cell.imageView?.downloaded(from: pictureURL)
