@@ -4,6 +4,9 @@ import AVKit
 class MusicPlayerController: UIViewController {
     var audioPlayer: AVPlayer?
     
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var nextMusicButton: UIButton!
+    @IBOutlet weak var prevMusicButton: UIButton!
     @IBOutlet weak var imgAlbumCover: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
@@ -22,6 +25,7 @@ class MusicPlayerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customMusicPlayerLayout()
         musicPlayerManager.playMusic(with: self.musics?[self.indexSound!])
         
         self.slider!.minimumValue = 0
@@ -94,7 +98,24 @@ class MusicPlayerController: UIViewController {
         }
     }
     
-    
+    func customMusicPlayerLayout() {
+        self.view.backgroundColor = UIColor(hex: "#191414")
+        self.titleLabel.textColor = UIColor.white
+        self.artistLabel.textColor = UIColor.white
+        self.slider.tintColor = UIColor(hex: "#1ed760")
+        
+        // Couleur pour les boutons
+        self.controlButton.tintColor = UIColor(hex: "#FFFFFF")
+        self.controlButton.layer.masksToBounds = true
+        self.controlButton.layer.cornerRadius = 35
+        self.nextMusicButton.tintColor = UIColor(hex: "#1ed760")
+        self.prevMusicButton.tintColor = UIColor(hex: "#1ed760")
+        
+        self.likeButton.tintColor = UIColor(hex: "#FFFFFF")
+        let likeButtonSize = self.likeButton.frame.size.width
+        self.likeButton.layer.cornerRadius = likeButtonSize / 2
+        self.likeButton.layer.masksToBounds = true
+    }
     
     func setupUI() {
         self.titleLabel.text = musics?[indexSound!].title

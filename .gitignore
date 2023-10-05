@@ -5,6 +5,7 @@
 *.perspectivev3
 *.xcuserstate
 xcuserdata/
+xcuserdatad/
 
 # Build generated
 build/
