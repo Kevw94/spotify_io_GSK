@@ -33,7 +33,8 @@ class MusicPlayerController: UIViewController {
         
         self.slider!.minimumValue = 0
         
-        
+        isLiked()
+
         
         // SET slider to 0 initial value
         self.slider.value = 0
@@ -61,7 +62,6 @@ class MusicPlayerController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupUI()
-        
     }
     
     
@@ -72,6 +72,7 @@ class MusicPlayerController: UIViewController {
             playNextTrack()
             setupUI()
         }
+        
         
     }
     
@@ -149,9 +150,21 @@ class MusicPlayerController: UIViewController {
         }
     }
     
+    func isLiked() {
+        if let currentMusic = musics?[indexSound!], LikedMusicModel.shared.likedMusics.contains(currentMusic) {
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            } else {
+                likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            }
+
+    }
+    
     func playNextTrack() {
         if self.indexSound! < self.musics?.count ?? 0 {
             musicPlayerManager.playMusic(with: self.musics?[self.indexSound!])
+            
+            isLiked()
+
             
             NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: musicPlayerManager.audioPlayer?.currentItem)
             
@@ -162,11 +175,13 @@ class MusicPlayerController: UIViewController {
                 }
             }
             
-            
             self.controlButton.isSelected = true
             self.controlButton.setImage(self.pauseImage, for: .normal)
             self.slider.value = 0
+        }else {
+            self.indexSound! = 0
         }
+        
     }
     
     func customMusicPlayerLayout() {
@@ -187,5 +202,6 @@ class MusicPlayerController: UIViewController {
         self.likeButton.layer.cornerRadius = likeButtonSize / 2
         self.likeButton.layer.masksToBounds = true
         self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+      
     }
 }
