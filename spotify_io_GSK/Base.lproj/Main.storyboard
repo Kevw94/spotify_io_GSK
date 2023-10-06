@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfo-OM-E6X">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -343,7 +344,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-06-Ko0">
-                                <rect key="frame" x="29.999999999999996" y="722.66666666666663" width="39.666666666666657" height="35"/>
+                                <rect key="frame" x="30.000000000000004" y="722.66666666666663" width="40.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title=""/>
                                 <connections>
@@ -351,7 +352,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-Cj-8k1">
-                                <rect key="frame" x="161" y="705" width="70" height="70"/>
+                                <rect key="frame" x="161.66666666666666" y="705" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="VuV-1T-Hjx"/>
                                     <constraint firstAttribute="width" constant="70" id="vPq-87-fsa"/>
@@ -368,6 +369,7 @@
                         <constraints>
                             <constraint firstItem="jHk-06-Ko0" firstAttribute="top" secondItem="XU8-jw-n5s" secondAttribute="bottom" constant="40.666666666666629" id="5BZ-OQ-EYn"/>
                             <constraint firstItem="hC5-Cj-8k1" firstAttribute="top" secondItem="XU8-jw-n5s" secondAttribute="bottom" constant="23" id="Aeb-BH-i96"/>
+                            <constraint firstItem="hC5-Cj-8k1" firstAttribute="centerX" secondItem="EZv-zv-gbx" secondAttribute="centerX" id="COy-1J-Vkv"/>
                             <constraint firstItem="XU8-jw-n5s" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="HBf-T4-mxa"/>
                             <constraint firstItem="XU8-jw-n5s" firstAttribute="top" secondItem="Pod-00-HAg" secondAttribute="bottom" constant="72" id="MjN-sY-Qsz"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="NSB-F9-sxz" secondAttribute="trailing" constant="47" id="RdZ-eo-oUL"/>
@@ -375,7 +377,6 @@
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="YcB-AP-AiD"/>
                             <constraint firstItem="qpk-Xw-cJq" firstAttribute="top" secondItem="XU8-jw-n5s" secondAttribute="bottom" constant="40.666666666666629" id="ZbC-RR-eBy"/>
                             <constraint firstItem="PHj-Av-9CX" firstAttribute="top" secondItem="NSB-F9-sxz" secondAttribute="bottom" constant="31" id="eG9-cC-B8W"/>
-                            <constraint firstItem="hC5-Cj-8k1" firstAttribute="leading" secondItem="jHk-06-Ko0" secondAttribute="trailing" constant="91.333333333333343" id="gvf-Cw-3y9"/>
                             <constraint firstItem="EZv-zv-gbx" firstAttribute="trailing" secondItem="XU8-jw-n5s" secondAttribute="trailing" constant="47" id="hO5-yP-pLb"/>
                             <constraint firstItem="NSB-F9-sxz" firstAttribute="leading" secondItem="EZv-zv-gbx" secondAttribute="leading" constant="46" id="i5e-ky-amV"/>
                             <constraint firstItem="Pod-00-HAg" firstAttribute="top" secondItem="PHj-Av-9CX" secondAttribute="bottom" constant="8" symbolic="YES" id="kgz-yd-Sam"/>
